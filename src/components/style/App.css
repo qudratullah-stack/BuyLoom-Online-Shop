@@ -1,0 +1,262 @@
+/* 'https://fakestoreapi.com/products */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#navbarParent {
+  background-color: #2ecbeb !important;
+}
+
+/* #navbarParent .nav-link, 
+#navbarParent .navbar-brand { */
+.parentBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  width: 95vw;
+  margin: 10px auto;
+  background-color: #dfdfdf;
+}
+
+.parent {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 380px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+}
+
+.parent img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.parent h3,
+.parent h4,
+.parent p {
+  margin: 10px 0;
+}
+.parent .child1 {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  margin: 0px auto;
+}
+
+.parent:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.parent:hover img {
+  transform: scale(1.05);
+}
+.spiner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgb(119, 109, 109);
+  border-top: 6px solid salmon;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+.homepagenavbar {
+  width: 100vw;
+  height: 100px;
+  background-color: #2ecbeb;
+  display: flex;
+  justify-content: space-between;
+}
+.linkparent ul {
+  display: flex;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.homepagenavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #0d6efd;
+  position: relative;
+}
+
+/* ul default (large screen) */
+.homepagenavbar ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.homepagenavbar .nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+.homepagenavbar img {
+  width: 70px;
+}
+
+/* three dot button */
+.homepagenavbar button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+.homepagenavbar h1{
+  font-size: 4em;
+  font-weight: 500;
+}
+
+.homepagelinkbtn {
+  width: 200px;
+  height: 55px;
+  border-radius: 15px;
+  background-color: #072e57; 
+  border: 1px solid white;
+  box-shadow: 0 8px 9px #bd30b4;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  animation: bgChange 1s linear infinite;
+}
+
+@keyframes bgChange {
+  0% {
+    background-color: #072e57;
+  }
+  50% {
+    background-color: #bd30b4;
+  }
+  100% {
+    background-color: #072e57;
+  }
+}
+.homeinformation {
+ width: 46%;
+  height: auto;
+  text-align: center;
+  background-color: none;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.animate-text {
+  font-size: 1.8rem;
+  animation: slideUp 0.5s ease-out;
+  font-weight: bold;
+  
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.homeinformation h2{
+  color: rgb(255, 255, 255);
+  font-size: 3em;
+  font-weight: 700;
+}
+.pharagraph{
+ width: 90%;
+  height: 150px;
+  overflow: hidden;
+  margin: 20px 0px;
+  overflow: hidden;
+}
+.containers{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  margin: 0px auto;
+  flex-wrap: wrap;
+  background-color: rgba(128,128,128,0.9);
+}
+.containers img{
+  width: 43%;
+  height: 400px;
+}
+
+.homepagebody{
+  background-image: url('homepagebody.jpeg');
+  background-size: cover;
+}
+
+.h1parent{
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: auto;
+}
+.homepageinformationscrool{
+  width: 54%;
+  height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+
+}
+.homepageinformationscrool ul{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 2px auto;
+  font-weight: 600;
+  color: #12377b;
+  border: 1px solid #eeebf4;
+  border-radius: 10px;
+  padding: 30px;
+}
+.container2{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: auto;
+  padding: 3px;
+}
+.homepagevideo1 video{
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px black;
+}
+.homepagevideo1{
+  height: 260px;
+  margin: auto 3px;
+}
+.homepagevideo1 ul{
+  border: 1px solid #f2eee7;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 16px;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
+  font-weight: 600;
+  color: #18116c;
+  border-radius: 10px;
+}
