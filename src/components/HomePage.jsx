@@ -62,7 +62,7 @@ function HomePage() {
             </div>
             <button className="homepagelinkbtn">
               <Link className="nav-link" to="/products">
-                Product
+                Start free trail
               </Link>
             </button>
           </div>
@@ -151,7 +151,7 @@ function HomePage() {
             </li>
           </ul>
         </div>
-        <div className="homepagevideo1">
+        <div className="homepagevideo2">
           <video src="byloom.mp4" autoPlay loop muted></video>
           <ul>
             <li>
@@ -176,6 +176,9 @@ function HomePage() {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="homepagecontactcontainer">
+      
       </div>
       <footer>
         <div className="footer">

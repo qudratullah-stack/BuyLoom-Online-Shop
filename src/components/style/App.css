@@ -133,7 +133,7 @@
   color: white;
   font-weight: bold;
   cursor: pointer;
-  animation: bgChange 1s linear infinite;
+  animation: bgChange 4s linear infinite;
 }
 
 @keyframes bgChange {
@@ -237,17 +237,20 @@
   width: 100vw;
   height: auto;
   padding: 3px;
+  margin: 10px auto;
 }
-.homepagevideo1 video{
+.homepagevideo2 video{
   height: 250px;
-  border-radius: 10px;
+ 
   box-shadow: 0 3px 5px black;
+
+  margin: 8px auto;
 }
-.homepagevideo1{
-  height: 260px;
-  margin: auto 3px;
+
+.homepagevideo2{
+  height: auto;
 }
-.homepagevideo1 ul{
+.homepagevideo2 ul{
   border: 1px solid #f2eee7;
   display: flex;
   flex-direction: column;
