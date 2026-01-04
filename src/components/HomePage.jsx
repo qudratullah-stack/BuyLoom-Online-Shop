@@ -8,7 +8,7 @@ function HomePage() {
     setThreeDot((prev) => !prev);
   };
   const text = [
-    " Welcome BuyLoom Shop",
+    "❤️Welcome to Buyloom Shop 🛍️  Everything You Need in One Place ✨ ❤️",
     "Explore a wide range of products and enjoy exclusive offers. Start your shopping journey now!",
     "Discover quality products at the best prices, handpicked just for you.",
     "Shop smart, shop fast, and enjoy a seamless online shopping experience.",
@@ -21,15 +21,13 @@ function HomePage() {
     }, 2000);
     return () => clearInterval(interval);
   }, []);
-  const colors = ["#0e1f4eff", "#3c0668ff", "#0b8024ff", "#360309ff", "black"];
+  const colors = ["#0e1f4eff", "#08525fff", "#0d2fc4ff", "#a116a1ff", "black"];
 
   return (
     <>
       <nav className="homepagenavbar">
-        <div className="h1parent">
-          <img src="/icon4.png" alt="icon" />
-          <h1 style={{ color: colors[pahargraphtext] }}>BuyLoom</h1>
-        </div>
+        
+        <img src="navbaricon.png" alt="navbaricon" />
         <div className={`linkparent ${threeDot ? "responsivelinkparent" : ""}`}>
           <ul>
             <li>
@@ -67,6 +65,9 @@ function HomePage() {
             </button>
           </div>
           <img src="banner2.webp" alt="byloom" />
+          <div className="responsiveimg">
+            <img src="responsivebanner.jpeg" alt="responsivebanner" />
+          </div>
         </div>
       </div>
       <div className="container2">
@@ -277,3 +278,4 @@ function HomePage() {
 }
 
 export default HomePage;
+

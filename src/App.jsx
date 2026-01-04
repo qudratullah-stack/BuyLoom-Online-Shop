@@ -1,5 +1,5 @@
 import React from 'react'
-// import Navbar from './components/Navbar'
+import Navbar from './components/Navbar'
 import './components/style/App.css'
 import './components/style/Responsive.css'
 import { BrowserRouter, Route , Routes } from 'react-router-dom'
@@ -14,7 +14,7 @@ function App() {
     <>
     <ProductProvider>
     <BrowserRouter>
-    {/* <Navbar/> */}
+    <Navbar/>
     <Routes>
       <Route path='/' element={ <HomePage/>}/>
       <Route path='/products' element={ <Card/>}/>

@@ -8,7 +8,7 @@ function Card() {
     <>
     <div className="parentBox">
      {spinner && <Spiner/>}
-    {product.map((item)=>(<div className="parent">
+    {product.map((item)=>(<div className="parent" key={item._id}>
         <img src={item.image} alt="productImage" />
         <h3>{item.name}</h3>
         <p>{item.description}</p>

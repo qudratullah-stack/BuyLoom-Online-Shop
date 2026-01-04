@@ -1,0 +1,25 @@
+.Logincontainer{
+    width: 600px;
+  height: 300px;
+  border: 1px solid rgb(207, 198, 198);
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.signupcontainer{
+     width: 600px;
+  height: 400px;
+  border: 1px solid rgb(207, 198, 198);
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+@media (max-width:700px){
+    .Logincontainer {
+  width: 90vw;}
+}
