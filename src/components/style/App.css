@@ -68,13 +68,7 @@
   border-radius: 50%;
   animation: spin 2s linear infinite;
 }
-.homepagenavbar {
-  width: 100vw;
-  height: 100px;
-  background-color: #2ecbeb;
-  display: flex;
-  justify-content: space-between;
-}
+
 .linkparent ul {
   display: flex;
 }
@@ -89,8 +83,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
-  background: #0d6efd;
-  position: relative;
+ width: 100vw;
+  height: 100px;
+  background-color: #0f8497;
 }
 
 /* ul default (large screen) */
@@ -129,7 +124,7 @@
   border-radius: 15px;
   background-color: #072e57; 
   border: 1px solid white;
-  box-shadow: 0 8px 9px #bd30b4;
+  box-shadow: 0 4px 6px #3d393d;
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -197,7 +192,7 @@
   background-color: rgba(128,128,128,0.9);
 }
 .containers img{
-  width: 43%;
+  width: 41%;
   height: 400px;
 }
 
@@ -241,10 +236,9 @@
 }
 .homepagevideo2 video{
   height: 250px;
- 
-  box-shadow: 0 3px 5px black;
-
-  margin: 8px auto;
+ box-shadow: 0 3px 5px black;
+ margin-left: 20px;
+ border-radius: 10px;
 }
 
 .homepagevideo2{
@@ -257,9 +251,151 @@
   gap: 5px;
   font-size: 16px;
   flex-wrap: wrap;
-  width: 100%;
+  width: 95%;
   padding: 20px;
   font-weight: 600;
   color: #18116c;
   border-radius: 10px;
+  margin-right: 20px;
+}
+.homepagecontactcontainer{
+  
+  width: 80vw;
+  height: auto;
+  margin: 2px auto;
+  border-radius: 20px;
+  background-color: white;
+  border: 1px solid #f2eee5;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.whatsapp{
+  border: 1px solid white;
+  width: 40%;
+  height: auto;
+  text-align: center;
+}
+.whatsappanimat img{
+  width: 100%;
+  height: 100%;
+}
+.whatsappanimat{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 5px auto;
+  animation: bgwhatsapp 5s linear infinite;
+  
+}
+.gmailanimate{
+  width: 200px;
+  height: 200px;
+   
+     margin: 5px auto;
+  animation: bgwhatsapp 5s linear infinite;
+}
+.gmailanimate img{
+  width: 100%;
+  height: 100%;
+ 
+}
+@keyframes bgwhatsapp {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: #ebe4f5;
+  }
+  100% {
+    background-color: white;
+  }}
+.parent-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+  margin: 30px 0px;
+}
+
+.trusted-list {
+  display: flex;
+  width: max-content; 
+  gap: 20px;
+  animation: slideLoop 25s linear infinite; 
+}
+
+
+.trusted-list:hover {
+  animation-play-state: paused;
+  
+}
+
+.trusted-list span {
+  flex-shrink: 0;
+  width: 200px; 
+  height: 120px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+  font-weight: 700;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+@keyframes slideLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 10px)); 
+  }
+}
+.footer{
+  background:#dbdbdb;
+  color:#000000;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  padding:40px 60px;
+  margin-top: 20px;
+}
+
+.footer-box{
+  width:220px;
+}
+
+.footer-box h3,
+.footer-box h4{
+  margin-bottom:10px;
+}
+
+.footer-box ul{
+  list-style:none;
+  padding:0;
+}
+
+.footer-box ul li{
+  margin:6px 0;
+}
+
+.footer-box a{
+  color:#000000;
+  text-decoration:none;
+}
+
+.footer-box a:hover{
+  color:#3f7976;
+}
+
+.footer-bottom{
+  background:#000000;
+  color:#ffffff;
+  text-align:center;
+  padding:10px;
+  font-size:14px;
 }

@@ -21,7 +21,7 @@ function HomePage() {
     }, 2000);
     return () => clearInterval(interval);
   }, []);
-  const colors = ["#44e286", "#020355", "#5df8f0", "#af2c3d", "black"];
+  const colors = ["#0e1f4eff", "#3c0668ff", "#0b8024ff", "#360309ff", "black"];
 
   return (
     <>
@@ -178,13 +178,100 @@ function HomePage() {
         </div>
       </div>
       <div className="homepagecontactcontainer">
-      
+        <div className="whatsapp">
+          <div className="whatsappanimat">
+            <a href="https://wa.me/03162538676" target="_blank">
+              {" "}
+              <img src="whatsappicon.png" alt="whatsappicon" />
+            </a>
+          </div>
+          <h2>Order via WhatsApp</h2>
+        </div>
+        <div className="whatsapp">
+          <div className="gmailanimate">
+            <a href="mailto:qudratullahmasoom6688@gmail.com">
+              {" "}
+              <img src="gmailicon.png" alt="gmailcon" />
+            </a>
+          </div>
+          <h2>Contact via Email</h2>
+        </div>
       </div>
-      <footer>
-        <div className="footer">
-          
+      <div className="parent-container">
+        <div className="trusted-list">
+          <span>⚡ Electronics </span>
+          <span>🧥 Fashion</span>
+          <span>🛍️ Buyloom </span>
+          <span>✨ Beauty & Care </span>
+          <span>🚀 Smart Gadgets </span>
+          <span>📦 Daily Needs</span>
+          <span>Top Deals</span>
+          <span>🧍‍♂️ Men's Wear</span>
+          <span>🧍‍♀️ Women's Fashion</span>
+          <span>🧰 Kitchen Tools</span>
+
+          <span>⚡ Electronics </span>
+          <span>🧥 Fashion</span>
+          <span>🛍️ Buyloom </span>
+          <span>✨ Beauty & Care </span>
+          <span>🚀 Smart Gadgets </span>
+          <span>📦 Daily Needs</span>
+          <span>Top Deals</span>
+          <span>🧍‍♂️ Men's Wear</span>
+          <span>🧍‍♀️ Women's Fashion</span>
+          <span>🧰 Kitchen Tools</span>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer-box">
+          <h3>Buyloom</h3>
+          <p>Your smart online shopping destination.</p>
+        </div>
+
+        <div class="footer-box">
+          <h4>Quick Links</h4>
+          <ul>
+            <li>
+              <a href="#">Shop</a>
+            </li>
+            <li>
+              <a href="#">Categories</a>
+            </li>
+            <li>
+              <a href="#">Top Deals</a>
+            </li>
+            <li>
+              <a href="#">New Arrivals</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-box">
+          <h4>Support</h4>
+          <ul>
+            <li>
+              <a href="#">Help Center</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+            <li>
+              <a href="#">Order Guide</a>
+            </li>
+            <li>
+              <a href="#">FAQs</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-box">
+          <h4>Contact</h4>
+          <p>Email: support@buyloom.com</p>
+          <p>WhatsApp: +92 316 2538676</p>
         </div>
       </footer>
+
+      <div class="footer-bottom">© 2026 Buyloom. All rights reserved.</div>
     </>
   );
 }
