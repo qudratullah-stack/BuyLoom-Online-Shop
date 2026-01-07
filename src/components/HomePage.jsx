@@ -41,6 +41,21 @@ function HomePage() {
                 Signup
               </Link>
             </li>
+             <li>
+              <Link className="nav-link" to="/Beauty">
+                Beauty
+              </Link>
+            </li>
+             <li>
+              <Link className="nav-link" to="/Electronic">
+                Electronic
+              </Link>
+            </li>
+             <li>
+              <Link className="nav-link" to="/Fashion">
+                Fashion
+              </Link>
+            </li>
           </ul>
         </div>
         <button onClick={handlethreedot}>☰</button>
@@ -223,13 +238,13 @@ function HomePage() {
           <span>🧰 Kitchen Tools</span>
         </div>
       </div>
-      <footer class="footer">
-        <div class="footer-box">
+      <footer className="footer">
+        <div className="footer-box">
           <h3>Buyloom</h3>
           <p>Your smart online shopping destination.</p>
         </div>
 
-        <div class="footer-box">
+        <div className="footer-box">
           <h4>Quick Links</h4>
           <ul>
             <li>
@@ -247,7 +262,7 @@ function HomePage() {
           </ul>
         </div>
 
-        <div class="footer-box">
+        <div className="footer-box">
           <h4>Support</h4>
           <ul>
             <li>
@@ -265,14 +280,14 @@ function HomePage() {
           </ul>
         </div>
 
-        <div class="footer-box">
+        <div className="footer-box">
           <h4>Contact</h4>
           <p>Email: support@buyloom.com</p>
           <p>WhatsApp: +92 316 2538676</p>
         </div>
       </footer>
 
-      <div class="footer-bottom">© 2026 Buyloom. All rights reserved.</div>
+      <div className="footer-bottom">© 2026 Buyloom. All rights reserved.</div>
     </>
   );
 }

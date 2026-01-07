@@ -5,7 +5,8 @@ function Signup() {
   
   return (
     <>
-   
+    <span className="buyloomtextanimate-x">Buyloom</span>
+    <span className="buyloomtextanimate-y">Buyloom</span>
     <div className="signupcontainer">
     <form>
        <div className="form-group">

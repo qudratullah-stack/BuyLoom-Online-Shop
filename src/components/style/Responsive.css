@@ -24,6 +24,9 @@
   .parent {
     width: 45%;
   }
+ .responsivelinkparent {
+  display: block;
+ }
   .homepagenavbar button {
     display: block;
     position: absolute;
@@ -42,29 +45,16 @@
   .homepagenavbar ul {
     display: none;
   }
-  .responsivelinkparent {
-    position: absolute;
-    top: 72px;
-    right: 20px;
-    background: white;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  }
-
-  .responsivelinkparent ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .responsivelinkparent .nav-link {
+ .responsivelinkparent ul {
+  display: flex;
+ }
+ .responsivelinkparent .nav-link {
     color: #0d6efd;
     padding: 8px 12px;
     border-radius: 6px;
     background: #f1f5ff;
   }
-  .homepagenavbar img {
+.homepagenavbar img {
     width: 39%;
     margin-top: 20px;
   }
@@ -110,10 +100,24 @@
   .homepagenavbar ul {
     display: none;
   }
+   .responsivelinkparent ul {
+  display: flex;
+ }
+ .responsivelinkparent .nav-link {
+    color: #0d6efd;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: #f1f5ff;
+  }
   .parent {
     width: 90%;
   }
-    
+   .responsivelinkparent {
+    display: block;
+  }
+  
+   
+   
   .containers img {
     display: none;
   }

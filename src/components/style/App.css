@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  overflow-x: hidden;
+}
 #navbarParent {
   background-color: #2ecbeb !important;
   height: 100px;
@@ -32,7 +35,22 @@
   text-align: center;
   padding: 15px;
 }
-
+ .responsivelinkparent {
+    display: none;
+     position: absolute;
+    top: 72px;
+    right: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  .responsivelinkparent ul {
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+  }
+  
 .parent img {
   width: 100%;
   height: 250px;
@@ -73,6 +91,10 @@
 
 .linkparent ul {
   display: flex;
+  color: white;
+}
+.linkparent .nav-link {
+  color: white;
 }
 
 @keyframes spin {
@@ -90,24 +112,20 @@
   background-color: #0f8497;
 }
 
-/* ul default (large screen) */
+
 .homepagenavbar ul {
   display: flex;
   gap: 15px;
   list-style: none;
+  color: white;
 }
 
-.homepagenavbar .nav-link {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
+
 .homepagenavbar img {
  width: 24%;
   margin-top: 29px;
 }
 
-/* three dot button */
 .homepagenavbar button {
   display: none;
   background: none;

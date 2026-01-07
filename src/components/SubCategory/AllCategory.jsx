@@ -1,0 +1,71 @@
+import React, { useContext, useEffect } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
+import { productContext } from '../../context/CreateContex'
+import Spiner from '../Spiner'
+import './AllCategoryStyle.css'
+function AllCategory() {
+    const {categoryName} = useParams()
+    const {SubCategories, allsubcategories, spinner} = useContext(productContext)
+   useEffect(()=>{
+    allsubcategories(categoryName)
+   },[categoryName])
+   const navigate = useNavigate()
+  return (
+    <>
+     {/* <nav className="homepagenavbar">
+        
+        <img src="navbaricon.png" alt="navbaricon" />
+        <div className={`linkparent ${threeDot ? "responsivelinkparent" : ""}`}>
+          <ul>
+            <li>
+              {" "}
+              <Link className="nav-link" to="/Login">
+                Login
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-link" to="/Signup">
+                Signup
+              </Link>
+            </li>
+             <li>
+              <Link className="nav-link" to="/Beauty">
+                Beauty
+              </Link>
+            </li>
+             <li>
+              <Link className="nav-link" to="/Electronic">
+                Electronic
+              </Link>
+            </li>
+             <li>
+              <Link className="nav-link" to="/Fashion">
+                Fashion
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <button onClick={handlethreedot}>☰</button>
+      </nav> */}
+    <div className="allLinkcontainer"></div>
+    <div className="parentBox">
+     {spinner && <Spiner/>}
+    {SubCategories && SubCategories.map((item)=>(<div className="allcategoryparents" key={item._id}>
+        <img src={item.image} alt="categortyproductImage" />
+        <h3>{item.name}</h3>
+        <p>{item.description}</p>
+        <h4>{item.category}</h4>
+        <div className="child1">
+        <h3>Price: {item.priceCents}</h3>
+        <h3>Rating: {item.rating?.stars}</h3>
+        </div>
+       <button onClick={()=> navigate(`/OrderPage/${item._id}`)}>Order</button>
+    </div>
+    ))}
+    </div>
+   
+    </>
+  )
+}
+
+export default AllCategory

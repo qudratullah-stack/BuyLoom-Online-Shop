@@ -3,6 +3,12 @@ import './Authentication.css'
 function Login() {
   return (
     <>
+  <div className="animateparetn">
+    <span className="buyloomtextanimate-x">Buyloom</span>
+    </div>
+    <span className="buyloomtextanimate-y">Buyloom</span>
+
+   
     <div className="Logincontainer">
     <form>
   <div className="form-group">
@@ -17,6 +23,7 @@ function Login() {
   <button type="submit" className="btn btn-primary">Submit</button>
 </form>
 </div>
+ 
     </>
   )
 }

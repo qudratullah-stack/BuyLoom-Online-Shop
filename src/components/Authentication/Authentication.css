@@ -1,25 +1,40 @@
-.Logincontainer{
-    width: 600px;
+.Logincontainer {
+  width: 600px;
   height: 300px;
-  border: 1px solid rgb(207, 198, 198);
   margin: 100px auto;
   padding: 20px;
   border-radius: 10px;
   font-weight: 600;
   font-size: 20px;
+  background-color: rgba(173,216,230,0.6);
+  border: none;
 }
-.signupcontainer{
-     width: 600px;
-  height: 400px;
-  border: 1px solid rgb(207, 198, 198);
-  margin: 100px auto;
-  padding: 20px;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 20px;
+.animateparent{
+  /* position: relative; */
+  overflow: hidden;
+  width: 100vw;
 }
 
-@media (max-width:700px){
-    .Logincontainer {
-  width: 90vw;}
+.buyloomtextanimate-x{
+  position: relative;
+  white-space: nowrap;
+  font-size: 90px;
+  color: rgba(0, 180, 255, 0.25); /* soft sky blue */
+  /* left: 100%; */
+  animation: slideText 4s linear infinite;
+}
+
+@keyframes slideText {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-120%);
+  }
+}
+
+@media (max-width: 700px) {
+  .Logincontainer {
+    width: 90vw;
+  }
 }
