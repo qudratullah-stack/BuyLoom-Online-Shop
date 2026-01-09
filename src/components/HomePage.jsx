@@ -79,7 +79,7 @@ function HomePage() {
               </Link>
             </button>
           </div>
-          <img src="banner2.webp" alt="byloom" />
+          <img src="banner2.webp" alt="byloom" id="container1img" />
           <div className="responsiveimg">
             <img src="responsivebanner.jpeg" alt="responsivebanner" />
           </div>

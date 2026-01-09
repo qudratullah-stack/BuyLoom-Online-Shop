@@ -34,21 +34,7 @@ function Beauty() {
                   </Link> 
                 </li>
               ))}
-                {/*<li>
-                  <Link className="nav-link" to={`/AllCategory/Beauty & Personal Care`}>
-                    Personal Care
-                  </Link>    
-                </li>
-                <li>
-                  <Link className="nav-link" to="/AllCategory/Health & Fitness">
-                    Health & Fitness
-                  </Link>
-                </li>
-                <li>
-                  <Link className="nav-link" to="/AllCategory/Home & Kitchen">
-                   Home & Kitchen
-                  </Link>
-                </li> */}
+
 
             </ul>
         </div>

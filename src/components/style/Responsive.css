@@ -115,10 +115,9 @@
    .responsivelinkparent {
     display: block;
   }
-  
    
    
-  .containers img {
+  .containers #container1img {
     display: none;
   }
   .responsiveimg img {

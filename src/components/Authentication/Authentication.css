@@ -60,6 +60,7 @@
   cursor: pointer;
   transition: transform 0.2s;
   margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 .btn-primary:hover {

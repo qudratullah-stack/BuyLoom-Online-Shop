@@ -17,12 +17,7 @@ function Electronic() {
       
     )
     : categoriesArray;
-    if(search === categoriesArray.name){
-      return filtercategoriesArray
-    }
-    else{
-      categoriesArray
-    }
+    
   return (
     <>
    <nav className="homepagenavbar">
