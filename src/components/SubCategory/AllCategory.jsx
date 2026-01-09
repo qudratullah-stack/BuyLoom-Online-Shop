@@ -12,41 +12,11 @@ function AllCategory() {
    const navigate = useNavigate()
   return (
     <>
-     {/* <nav className="homepagenavbar">
-        
-        <img src="navbaricon.png" alt="navbaricon" />
-        <div className={`linkparent ${threeDot ? "responsivelinkparent" : ""}`}>
-          <ul>
-            <li>
-              {" "}
-              <Link className="nav-link" to="/Login">
-                Login
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link" to="/Signup">
-                Signup
-              </Link>
-            </li>
-             <li>
-              <Link className="nav-link" to="/Beauty">
-                Beauty
-              </Link>
-            </li>
-             <li>
-              <Link className="nav-link" to="/Electronic">
-                Electronic
-              </Link>
-            </li>
-             <li>
-              <Link className="nav-link" to="/Fashion">
-                Fashion
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <button onClick={handlethreedot}>☰</button>
-      </nav> */}
+     <nav className="homepagenavbar">
+            
+            <img src="/navbaricon.png" alt="navbaricon" />
+           
+          </nav>
     <div className="allLinkcontainer"></div>
     <div className="parentBox">
      {spinner && <Spiner/>}

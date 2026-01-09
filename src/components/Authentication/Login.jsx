@@ -3,13 +3,8 @@ import './Authentication.css'
 function Login() {
   return (
     <>
-  <div className="animateparetn">
-    <span className="buyloomtextanimate-x">Buyloom</span>
-    </div>
-    <span className="buyloomtextanimate-y">Buyloom</span>
-
-   
-    <div className="Logincontainer">
+    <div className="body">
+  <div className="Logincontainer">
     <form>
   <div className="form-group">
     <label htmlFor="exampleInputEmail1">Email address</label>
@@ -23,7 +18,8 @@ function Login() {
   <button type="submit" className="btn btn-primary">Submit</button>
 </form>
 </div>
- 
+<div className="spantextlogin">BuyLoom</div>
+ </div>
     </>
   )
 }

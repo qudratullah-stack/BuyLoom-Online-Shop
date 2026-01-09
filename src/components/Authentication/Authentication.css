@@ -1,40 +1,114 @@
-.Logincontainer {
-  width: 600px;
-  height: 300px;
-  margin: 100px auto;
-  padding: 20px;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 20px;
-  background-color: rgba(173,216,230,0.6);
-  border: none;
-}
-.animateparent{
-  /* position: relative; */
+/* مین کنٹینر جو اب پورے پیج کو کور کرے گا */
+.body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #f4f7f6; /* ہلکا گرے بیک گراؤنڈ */
   overflow: hidden;
-  width: 100vw;
-}
-
-.buyloomtextanimate-x{
   position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* لاگ ان باکس کا خوبصورت کارڈ سٹائل */
+.Logincontainer {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  z-index: 10; /* فارم کو اوپر رکھنے کے لیے */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1.5px solid #eee;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin-top: 6px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* BuyLoom ٹیکسٹ جو باڈی میں گھومے گا */
+.spantextlogin {
+  position: absolute;
+  font-size: 8rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.04); /* بہت ہلکا رنگ تاکہ پیچھے محسوس ہو */
   white-space: nowrap;
-  font-size: 90px;
-  color: rgba(0, 180, 255, 0.25); /* soft sky blue */
-  /* left: 100%; */
-  animation: slideText 4s linear infinite;
+  user-select: none;
+  z-index: 1;
+  animation: floating 20s linear infinite;
 }
 
-@keyframes slideText {
-  from {
-    transform: translateX(0);
+/* اینیمیشن کی سیٹنگ */
+@keyframes floating {
+  0% {
+    top: 10%;
+    left: -10%;
+    transform: rotate(0deg);
   }
-  to {
-    transform: translateX(-120%);
+  25% {
+    top: 70%;
+    left: 30%;
+    transform: rotate(90deg);
+  }
+  50% {
+    top: 40%;
+    left: 80%;
+    transform: rotate(180deg);
+  }
+  75% {
+    top: -10%;
+    left: 40%;
+    transform: rotate(270deg);
+  }
+  100% {
+    top: 10%;
+    left: -10%;
+    transform: rotate(360deg);
   }
 }
-
-@media (max-width: 700px) {
-  .Logincontainer {
-    width: 90vw;
+@media (max-width:450px){
+  .spantextlogin {
+    font-size: 4em;
   }
 }
