@@ -28,7 +28,13 @@ function HomePage() {
       <nav className="homepagenavbar">
         
         <img src="navbaricon.png" alt="navbaricon" />
+     
         <div className={`linkparent ${threeDot ? "responsivelinkparent" : ""}`}>
+          <ul>
+            <li id="firstchild">
+               <Link to="/HelpCenter"> <span  style={{ backgroundColor: colors[pahargraphtext] }} >Ask a question</span></Link>
+            </li>
+          </ul>
           <ul>
             <li>
               {" "}
@@ -74,10 +80,11 @@ function HomePage() {
               </p>
             </div>
             <button className="homepagelinkbtn">
-              <Link className="nav-link" to="/products">
+              <Link className="nav-link" to="/products/card">
                 Start free trail
               </Link>
             </button>
+            
           </div>
           <img src="banner2.webp" alt="byloom" id="container1img" />
           <div className="responsiveimg">
@@ -248,16 +255,19 @@ function HomePage() {
           <h4>Quick Links</h4>
           <ul>
             <li>
-              <a href="#">Shop</a>
+              <Link to="/products/card">Shop</Link>
             </li>
             <li>
-              <a href="#">Categories</a>
+               <Link to="/Fashion">Categories</Link>
+              
             </li>
             <li>
-              <a href="#">Top Deals</a>
+               <Link to="/Electronic">Top Deals</Link>
+              
             </li>
             <li>
-              <a href="#">New Arrivals</a>
+              <Link to="/Electronic">New Arrivals</Link>
+             
             </li>
           </ul>
         </div>
@@ -266,23 +276,27 @@ function HomePage() {
           <h4>Support</h4>
           <ul>
             <li>
-              <a href="#">Help Center</a>
+                 <Link to="/HelpCenter">Help Center</Link>
+              
             </li>
             <li>
-              <a href="#">Contact Us</a>
+                 <Link to="/ContactUs">Contact Us</Link>
+             
             </li>
             <li>
-              <a href="#">Order Guide</a>
+               <Link to="/OrderGuide">Order Guide</Link>
+              
             </li>
             <li>
-              <a href="#">FAQs</a>
+                 <Link to="/FaQs">FaQs</Link>
+             
             </li>
           </ul>
         </div>
 
         <div className="footer-box">
           <h4>Contact</h4>
-          <p>Email: support@buyloom.com</p>
+          <p>Email: masoomkhanqudrat@gmail.com</p>
           <p>WhatsApp: +92 316 2538676</p>
         </div>
       </footer>

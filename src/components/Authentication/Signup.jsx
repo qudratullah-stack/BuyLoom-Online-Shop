@@ -48,6 +48,7 @@ function Signup() {
       code:VerifyCode
       })
       alert(response.data.message)
+      localStorage.setItem("verify",true)
     }catch(err){
       alert(err.response?.data.message)
     }

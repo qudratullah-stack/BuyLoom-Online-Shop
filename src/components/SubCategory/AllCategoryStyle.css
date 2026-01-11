@@ -6,6 +6,10 @@
   justify-content: center;
   margin: 20px;
   border-radius: 10px;
+  text-align: center;
+}
+.firstchildlink li{
+  list-style: none;
 }
 #categorysearchinput{
     width: 30%;

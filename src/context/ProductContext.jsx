@@ -7,6 +7,7 @@ export const ProductProvider = ({children}) =>{
    const [threeDot, setThreeDot] = useState(false)
    const [SubCategories, SetSubCotegories] = useState([])
    const [orderproduct, setOrderProduct] = useState([])
+   const [giveAnswer, setGiveAnswer] = useState('')
     // all product function ***************
    const fetchproduct = async()=>{
        try{
@@ -52,7 +53,7 @@ export const ProductProvider = ({children}) =>{
     }
     return(
         <productContext.Provider 
-        value={{product, setProduct, spinner, threeDot, setThreeDot, SubCategories, allsubcategories, orderidproduct, orderproduct}}>
+        value={{product, setProduct, spinner, threeDot, setThreeDot, SubCategories, allsubcategories, orderidproduct, orderproduct, giveAnswer, setGiveAnswer}}>
             {children}
         </productContext.Provider>
     )

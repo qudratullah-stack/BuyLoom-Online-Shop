@@ -1,9 +1,18 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import './Authentication.css'
 import axios from 'axios';
 function Login() {
   const [loginEmail, setLoginEmail] = useState('')
   const [loginPassword, setLoginPassword] = useState('')
+  const [successAlert, setSuccessAlert] = useState(false)
+  const [alerts , setAlert] = useState('')
+  const [dangerAlert, setDangerAlert] = useState(false)
+ useEffect(()=>{
+  const timer = setTimeout(() => {
+    setSuccessAlert(false)
+    setDangerAlert(false)
+  }, 4000);
+ })
   const handleform = async (e)=>{
       e.preventDefault();
       try{
@@ -11,19 +20,30 @@ function Login() {
      email: loginEmail,
      password: loginPassword
      })
-     alert(res.data.message)
+     setAlert(res.data.message)
+     setSuccessAlert(true)
+     localStorage.setItem('token', res.data.token)
     }catch(err){
-      alert(err.response?.data.message)
+      setAlert(err.response?.data.message)
+      setDangerAlert(true)
     }
   }
+
   return (
     <>
+     {successAlert && <div className="alert alert-primary" role="alert">
+  {alerts}
+    </div>}
+  
+{dangerAlert &&<div className="alert alert-danger" role="alert">
+  {alerts} </div>}
     <div className="body">
   <div className="Logincontainer">
     <form onSubmit={handleform}>
   <div className="form-group">
     <label htmlFor="exampleInputEmail1">Email address</label>
-    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e)=> setLoginEmail(e.target.value)}/>
+    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e)=> setLoginEmail(e.target.value)}style={{border:loginEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(loginEmail)?'2px solid red':''}} />
+    
   </div>
   <div className="form-group">
     <label htmlFor="exampleInputPassword1">Password</label>

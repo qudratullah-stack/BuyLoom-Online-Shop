@@ -12,6 +12,12 @@ import Electronic from './components/SubCategory/Electronic'
 import Fashion from './components/SubCategory/Fashion'
 import AllCategory from './components/SubCategory/AllCategory'
 import OrderPage from './components/SubCategory/OrderPage'
+import HelpCenter from '../supportPage/HelpCenter'
+import ContactUs from '../supportPage/ContactUs'
+import FaQs from '../supportPage/FaQs'
+import OrderGuide from '../supportPage/OrderGuide'
+import AnswerePage from '../supportPage/AnswerePage'
+
 function App() {
   return (
     <>
@@ -20,7 +26,7 @@ function App() {
     
     <Routes>
       <Route path='/' element={ <HomePage/>}/>
-      <Route path='/products' element={ <Card/>}/>
+      <Route path='/products/card' element={ <Card/>}/>
       <Route path='/login' element={ <Login/>}/>
       <Route path='/Signup' element={ <Signup/>}/>
       <Route path='/Beauty' element={ <Beauty/>}/>
@@ -28,6 +34,11 @@ function App() {
       <Route path='/Electronic' element={ <Electronic/>}/>
       <Route path='/AllCategory/:categoryName' element={ <AllCategory/>}/>
       <Route path='/OrderPage/:id' element={ <OrderPage/>}/>
+      <Route path='/HelpCenter' element={ <HelpCenter/>}/>
+      <Route path='/ContactUs' element={ <ContactUs/>}/>
+      <Route path='/FaQs' element={ <FaQs/>}/>
+      <Route path='/OrderGuide' element={ <OrderGuide/>}/>
+      <Route path='/AnswerePage' element={ <AnswerePage/>}/>
     </Routes>
     </BrowserRouter>
     </ProductProvider>
