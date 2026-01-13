@@ -281,3 +281,14 @@ export const helpwithimage = [
     },
    
 ]
+export const allcategoryArray = [
+  { image: "/Arrayimg/allproductimg.jpeg",
+    text: 'this is image one'
+  },
+   { image: "/Arrayimg/girlimg.jpeg",
+    text: 'this is image two'
+  },
+  { image: "/buyloom.jpg",
+    text: 'this is image three'
+  },
+]

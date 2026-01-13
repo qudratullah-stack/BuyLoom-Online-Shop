@@ -17,13 +17,13 @@ import ContactUs from '../supportPage/ContactUs'
 import FaQs from '../supportPage/FaQs'
 import OrderGuide from '../supportPage/OrderGuide'
 import AnswerePage from '../supportPage/AnswerePage'
-
+import Loading from './components/SubCategory/Loading'
 function App() {
   return (
     <>
     <ProductProvider>
     <BrowserRouter>
-    
+      <Loading/>
     <Routes>
       <Route path='/' element={ <HomePage/>}/>
       <Route path='/products/card' element={ <Card/>}/>

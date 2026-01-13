@@ -16,7 +16,7 @@ function Signup() {
   const handlesubmit = async (e)=>{
     e.preventDefault();
     try{
-    const res = await axios.post('http://localhost:9000/authentication/signup',{
+    const res = await axios.post('https://buyloom-backend-production.up.railway.app/authentication/signup',{
       name,
       email,
       password
@@ -44,7 +44,7 @@ function Signup() {
   }
   const handleVerifyCode = async()=>{
     try{
-    const response = await axios.post('http://localhost:9000/authentication/verifyEmail',{
+    const response = await axios.post('https://buyloom-backend-production.up.railway.app/authentication/verifyEmail',{
       code:VerifyCode
       })
       alert(response.data.message)

@@ -1,8 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect,useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { productContext } from "../../context/CreateContex";
 import Spiner from "../Spiner";
 import "./AllCategoryStyle.css";
+import { allcategoryArray } from "../../../supportPage/HelpCenterDate";
 function AllCategory() {
   const { categoryName } = useParams();
   const { SubCategories, allsubcategories, spinner } =
@@ -11,14 +12,32 @@ function AllCategory() {
     allsubcategories(categoryName);
   }, [categoryName]);
   const navigate = useNavigate();
+  const [imagearry, setIimagearry] = useState(1)
+      useEffect(()=>{
+        const interval = setInterval(() => {
+        setIimagearry((prev) => (prev + 1) % allcategoryArray.length);
+      }, 4000);
+       return () => clearInterval(interval);
+      },[])
   return (
     <>
       <nav className="homepagenavbar">
         <img src="/navbaricon.png" alt="navbaricon" />
       </nav>
+         <div className="parentBox">
+          <div className="helpone">
+            {spinner && <Spiner />}
+  {allcategoryArray.map((item, idx) => (
+    <img
+      key={idx}
+      src={item.image}
+      alt="Gallery"
+      className={idx === imagearry ? "active" : ""}
+    />
+  ))}
+         </div>
       
-      <div className="parentBox">
-        {spinner && <Spiner />}
+     
         {SubCategories &&
           SubCategories.map((item) => (
             <div className="allcategoryparents" key={item._id}>
@@ -48,6 +67,7 @@ function AllCategory() {
             </div>
           ))}
       </div>
+          {spinner && <span>Network error</span>}
     </>
   );
 }

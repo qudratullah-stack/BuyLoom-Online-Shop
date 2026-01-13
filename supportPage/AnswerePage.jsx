@@ -10,7 +10,7 @@ const fuse = new Fuse(helpCenterData,{
   keys:['question']
 })
 const result = fuse.search(giveAnswer)
-const answer = result.length ? result[0].item.answer: "Answer not found. AI fallback will provide response:"
+const answer = result.length ? result[0].item.answer: "Hello dear users,Welcome to our website!Here youcan get information about our website, such as learning about any page or obtaining other information.We are at your service.Where would you like to start?"
   return (
     <>
      <nav className="homepagenavbar">

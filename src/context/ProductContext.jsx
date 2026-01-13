@@ -1,5 +1,5 @@
 import axios from "axios";
-import {  useState, useEffect} from "react";
+import {  useEffect, useState} from "react";
 import { productContext } from "./CreateContex";
 export const ProductProvider = ({children}) =>{
    const [product, setProduct] = useState([])
@@ -9,27 +9,35 @@ export const ProductProvider = ({children}) =>{
    const [orderproduct, setOrderProduct] = useState([])
    const [giveAnswer, setGiveAnswer] = useState('')
     // all product function ***************
-   const fetchproduct = async()=>{
-       try{
-           setSpinner(true)
-           const res =   await axios.get('http://localhost:9000/api/readproduct') 
-           setProduct(res.data.Products || [])
-           
-        }catch(err){
-            console.error(err)
-        }finally{
-            setSpinner(false)
-        }
+const [page, setPage] = useState(1);
+ 
+
+ const fetchproduct = async (targetPage) => {
+  if (spinner) return; 
+
+  setSpinner(true);
+  try {
+    const res = await axios.get(
+      `https://buyloom-backend-production.up.railway.app/api/readproduct?page=${targetPage}&limit=10`
+    );
+
+    const newProducts = res.data?.products || [];
+    
+    if (newProducts.length > 0) {
+      setProduct((prev) => [...prev, ...newProducts]);
+      setPage(targetPage + 1); 
     }
-    useEffect(()=>{
-    fetchproduct()
-   
-   },[])
+  } catch (err) {
+    console.error(err);
+  } finally {
+    setSpinner(false);
+  }
+};
     // all categories function ***************
     const allsubcategories = async(categoryName)=>{
     try{
         setSpinner(true)
-        const response = await axios.get(`http://localhost:9000/api/product/category/subCategory/${encodeURIComponent(categoryName)}`)
+        const response = await axios.get(`https://buyloom-backend-production.up.railway.app/api/product/category/subCategory/${encodeURIComponent(categoryName)}`)
         SetSubCotegories(response.data.nameCategory || [])
         
     }catch(err){
@@ -43,7 +51,7 @@ export const ProductProvider = ({children}) =>{
     const orderidproduct = async(id)=>{
         try{
             setSpinner(true)
-            const order = await axios.get(`http://localhost:9000/api/Orderproduct/Order/${id}`)
+            const order = await axios.get(`https://buyloom-backend-production.up.railway.app/api/Orderproduct/Order/${id}`)
                 setOrderProduct(order.data.orderid)
         }catch(err){
             console.error(err)
@@ -53,7 +61,7 @@ export const ProductProvider = ({children}) =>{
     }
     return(
         <productContext.Provider 
-        value={{product, setProduct, spinner, threeDot, setThreeDot, SubCategories, allsubcategories, orderidproduct, orderproduct, giveAnswer, setGiveAnswer}}>
+        value={{product, setProduct, spinner, threeDot, setThreeDot, SubCategories, allsubcategories, orderidproduct, orderproduct, giveAnswer, setGiveAnswer, fetchproduct,page}}>
             {children}
         </productContext.Provider>
     )

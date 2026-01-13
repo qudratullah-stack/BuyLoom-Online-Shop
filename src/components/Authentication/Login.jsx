@@ -16,7 +16,7 @@ function Login() {
   const handleform = async (e)=>{
       e.preventDefault();
       try{
-     const res = await axios.post("http://localhost:9000/authentication/login",{
+     const res = await axios.post("https://buyloom-backend-production.up.railway.app/authentication/login",{
      email: loginEmail,
      password: loginPassword
      })

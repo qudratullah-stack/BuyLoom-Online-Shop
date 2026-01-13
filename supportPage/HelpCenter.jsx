@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom'
 function HelpCenter() {
   const navigate = useNavigate()
     const {setGiveAnswer} = useContext(productContext)
-    const [imagearry, setIimagearry] = useState(0)
+    const [imagearry, setIimagearry] = useState(1)
     useEffect(()=>{
       const interval = setInterval(() => {
       setIimagearry((prev) => (prev + 1) % helpwithimage.length);

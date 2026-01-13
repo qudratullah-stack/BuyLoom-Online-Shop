@@ -6,6 +6,7 @@ import './AllCategoryStyle.css'
 import '../style/Responsive.css'
 function OrderPage() {
   const [quantity, setQuantity] = useState(0)
+  const [showPayment, setShowPayment] = useState(false);
   const {id} = useParams()
   const {orderidproduct, orderproduct, spinner, threeDot,setThreeDot} = useContext(productContext)
   const price = orderproduct.priceCents
@@ -51,6 +52,7 @@ function OrderPage() {
         </div>
         <button onClick={handlethreedot}>☰</button>
       </nav>
+    {showPayment &&  <div className="paymentboxundergreycolor"></div>}
       <div className="spinerparent">
 
   {spinner && <Spiner/>}
@@ -79,10 +81,37 @@ function OrderPage() {
        <p>Subtotal: {totlalPrice}</p>
       <p>Discount:{totalDiscount}</p>
       <p>Total Payable: {totlaPriceWithdiscount}</p>
+    <button onClick={() => setShowPayment(true)}>Complete Your Purchase Securely</button>
     </div>
     </div>
     </div>
-      
+      {showPayment && (
+  <div className="payment-box">
+    <button className="close-btn" onClick={() => setShowPayment(false)}>×</button>
+    <h3>Select Payment Method</h3>
+    <ul>
+      <li>
+        <a href={`https://wa.me/923162538676?text=I want to pay for my order`} target="_blank" rel="noopener noreferrer">
+          WhatsApp
+        </a>
+      </li>
+      <li>
+        <a href="https://www.easypaisa.com.pk/" target="_blank" rel="noopener noreferrer">
+          Easypaisa
+        </a>
+      </li>
+      <li>
+        <a href="https://www.visa.com/" target="_blank" rel="noopener noreferrer">
+          Credit Card
+        </a>
+      </li>
+      <li>
+        <a href="https://www.jazzcash.com.pk/" target="_blank" rel="noopener noreferrer">
+          JazzCash
+        </a>
+      </li>
+    </ul>
+  </div>)}
     </>
   )
 }

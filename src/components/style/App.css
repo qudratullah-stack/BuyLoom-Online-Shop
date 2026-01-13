@@ -1,4 +1,4 @@
-/* 'https://fakestoreapi.com/products */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,18 +11,16 @@ body{
   background-color: #2ecbeb !important;
   height: 100px;
 }
-
-/* #navbarParent .nav-link, 
-#navbarParent .navbar-brand { */
 .parentBox {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 20px;
-  width: 95vw;
-  margin: 10px auto;
+  width: 100vw;
+  margin: 0 auto;
   background-color: #dfdfdf;
+  
 }
 
 
@@ -49,6 +47,8 @@ body{
   border-top: 6px solid salmon;
   border-radius: 50%;
   animation: spin 2s linear infinite;
+  margin: 5px auto;
+  display: block;
 }
 .linkparent{
   display: flex;
@@ -198,7 +198,7 @@ body{
 }
 
 .homepagebody{
-  background-image: url('homepagebody.jpeg');
+  background-image: url('/homepagebody.jpeg');
   background-size: cover;
 }
 
@@ -394,4 +394,45 @@ body{
   text-align:center;
   padding:10px;
   font-size:14px;
+}
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, #ff0909, #fbff0f, #eb10ff);
+  background-size: 200% 100%;
+  z-index: 10000;
+  box-shadow: 0 0 8px rgba(0, 122, 204, 0.6);
+  opacity: 1;
+}
+
+.loading.run {
+  animation: 
+    loadingBar 1.5s cubic-bezier(0.65, 0.05, 0.36, 1) forwards,
+    gradientMove 2s linear infinite,
+    fadeOut 0.3s ease-in 1.5s forwards;
+}
+
+@keyframes loadingBar {
+  0% {
+    width: 0%;
+  }
+  65% {
+    width: 75%;
+  }
+  100% {
+    width: 100vw;
+  }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 100% 0%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; visibility: hidden; }
 }

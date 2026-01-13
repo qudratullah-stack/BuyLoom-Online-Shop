@@ -34,30 +34,19 @@ Buyloom is a professional online shopping platform, designed to showcase product
 
 ## 📸 Screenshots
 
-### 1. Home Page – Navbar Categories
-<img src="public/screenshots/homepage.png" alt="Navbar Categories" width="600"/>
-
-### 2. Home Page Banner
-<img src="public/screenshots/buyloombanner.png" alt="Home Banner" width="600"/>
-
-### 3. Products Display
-<img src="public/screenshots/product.png" alt="Products Display" width="600"/>
-
-### 4. Sign Up Success
-<img src="public/screenshots/signup.png" alt="Sign Up Success" width="600"/>
-
-### 5. Q&A Feature
-<img src="public/screenshots/userquestion.png" alt="Q&A Feature" width="600"/>
-
-### 6. Order Product Page
-<img src="public/screenshots/ordercard.png" alt="Order Product Page" width="600"/>
+![Navbar Categories](screenshots/homepage.png)
+![Home Banner](screenshots/buyloombanner.png)
+![Products Display](screenshots/product.png)
+![Sign Up Success](screenshots/signup.png)
+![Q&A Feature](screenshots/userquestion.png)
+![Order Product Page](screenshots/ordercard.png)
 
 ---
 
 ## 🌐 Deployment Links
 
 - **Frontend (Vercel):** [Live Demo](#)  
-- **Backend (Railway/Render):** [API Link](#)  
+- **Backend (Railway/Render):** [https://buyloom-backend-production.up.railway.app](#)  
 
 ---
 
