@@ -11,7 +11,7 @@ function Login() {
   const timer = setTimeout(() => {
     setSuccessAlert(false)
     setDangerAlert(false)
-  }, 4000);
+  }, 1300);
  })
   const handleform = async (e)=>{
       e.preventDefault();

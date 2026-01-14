@@ -13,23 +13,32 @@ function Signup() {
   const [dangerAlert, setDangerAlert] = useState(false)
   const[countsecond, SetCountSecond] = useState(320)
  
-  const handlesubmit = async (e)=>{
-    e.preventDefault();
-    try{
-    const res = await axios.post('https://buyloom-backend-production.up.railway.app/authentication/signup',{
+ const handlesubmit = async (e) => {
+ e.preventDefault();
+  
+  if (name === "" || email === "" || password === "") {
+    setAlert("Please fill all fields");
+    setDangerAlert(true);
+    return;
+  }
+
+  try {
+    const res = await axios.post('https://buyloom-backend-production.up.railway.app/authentication/signup', {
       name,
       email,
       password
-    })
-    setAlert(res.data.message)
-     setSuccessAlert(true)
+    });
+
     
-    }catch(err){
-      setAlert(err.response?.data.message || "Something went wrong")
-      setDangerAlert(true)
-    }
-      
+    setAlert(res.data.message);
+    setSuccessAlert(true);
+    setFormDisplay(true); 
+
+  } catch (err) {
+    setAlert(err.response?.data.message || "Something went wrong");
+    setDangerAlert(true);
   }
+};
   useEffect(()=>{
       const timer = setTimeout(() => {
       setSuccessAlert(false)

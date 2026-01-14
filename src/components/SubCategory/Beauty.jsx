@@ -29,7 +29,7 @@ function Beauty() {
              <ul>
               {filtercategoriesArray.map((item, index)=>(
                 <li key={index} >
-                   <Link className="nav-link" to={`/AllCategory/${item.Path}`}>
+                   <Link className="nav-link" to={`/AllCategory/${encodeURIComponent(item.Path)}`}>
                     {item.name}
                   </Link> 
                 </li>
