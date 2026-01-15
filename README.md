@@ -45,7 +45,7 @@ Buyloom is a professional online shopping platform, designed to showcase product
 
 ## 🌐 Deployment Links
 
-- **Frontend (Vercel):** [Live Demo](#)  
+- **Frontend (Vercel):** [https://buy-loom-online-shop.vercel.app](#)  
 - **Backend (Railway/Render):** [https://buyloom-backend-production.up.railway.app](#)  
 
 ---
@@ -61,7 +61,16 @@ Buyloom is a professional online shopping platform, designed to showcase product
 7. **Contact Admin:** Reach out for support or inquiries.  
 
 ---
-
+ ##  📧 Email Verification System (Resend Integration)
+Current Status: Testing/Development Mode 🧪
+Why can't everyone sign up?
+For security and cost-management, this project uses the Resend email service in Onboarding Mode. This means:
+Restricted Domain: Currently, emails can only be sent to the developer's registered email address.
+403 Forbidden Error: If you attempt to sign up with a random email, the server will return a 403 status because the domain is not yet verified in a production environment.
+How to test the Signup flow?
+If you are a recruiter or developer looking to test this feature, please follow these steps:
+Contact me to add your email to the Authorized Test Audience.
+Or, use the provided Demo Credentials below to explore the app without signing up.
 ## 💡 Notes
 
 - All products, categories, and subcategories are stored in **MongoDB**.  
@@ -70,6 +79,18 @@ Buyloom is a professional online shopping platform, designed to showcase product
 - Animations and text effects enhance professional user experience.  
 
 ---
+## ---
+
+## 👤 Author & Developer
+
+**Qudratullah** Full Stack Developer 💻
+
+If you have any questions, suggestions, or want to collaborate, feel free to reach out:
+
+- **Email:** [qudratullahmasoom6688@gmail.com] 📧
+- **GitHub:** [qudratullah-stack](https://github.com/qudratullah-stack) 🐙
+-
+
 
 ## 📌 License
 
