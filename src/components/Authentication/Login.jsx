@@ -16,7 +16,7 @@ function Login() {
   const handleform = async (e)=>{
       e.preventDefault();
       try{
-     const res = await axios.post("https://buyloom-backend-production.up.railway.app/authentication/login",{
+     const res = await axios.post("https://coastal-isabella-qudratmasoom-51835cde.koyeb.app/authentication/login",{
      email: loginEmail,
      password: loginPassword
      })

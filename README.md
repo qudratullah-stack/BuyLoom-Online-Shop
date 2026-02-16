@@ -70,7 +70,7 @@ Restricted Domain: Currently, emails can only be sent to the developer's registe
 How to test the Signup flow?
 If you are a recruiter or developer looking to test this feature, please follow these steps:
 Contact me to add your email to the Authorized Test Audience.
-Or, use the provided Demo Credentials below to explore the app without signing up.
+Or, use the provided Demo Credentials and below to explore the app without signing up.
 ## 💡 Notes
 
 - All products, categories, and subcategories are stored in **MongoDB**.  

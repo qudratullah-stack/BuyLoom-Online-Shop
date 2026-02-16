@@ -18,7 +18,7 @@ const [page, setPage] = useState(1);
   setSpinner(true);
   try {
     const res = await axios.get(
-      `https://buyloom-backend-production.up.railway.app/api/readproduct?page=${targetPage}&limit=10`
+      `https://coastal-isabella-qudratmasoom-51835cde.koyeb.app/api/readproduct?page=${targetPage}&limit=10`
     );
 
     const newProducts = res.data?.products || [];
@@ -37,7 +37,7 @@ const [page, setPage] = useState(1);
     const allsubcategories = async(categoryName)=>{
     try{
         setSpinner(true)
-        const response = await axios.get(`https://buyloom-backend-production.up.railway.app/api/product/category/subCategory/${encodeURIComponent(categoryName)}`)
+        const response = await axios.get(`https://coastal-isabella-qudratmasoom-51835cde.koyeb.app/api/product/category/subCategory/${encodeURIComponent(categoryName)}`)
         SetSubCotegories(response.data.nameCategory || [])
         
     }catch(err){
@@ -51,7 +51,7 @@ const [page, setPage] = useState(1);
     const orderidproduct = async(id)=>{
         try{
             setSpinner(true)
-            const order = await axios.get(`https://buyloom-backend-production.up.railway.app/api/Orderproduct/Order/${id}`)
+            const order = await axios.get(`https://coastal-isabella-qudratmasoom-51835cde.koyeb.app/api/Orderproduct/Order/${id}`)
                 setOrderProduct(order.data.orderid)
         }catch(err){
             console.error(err)
