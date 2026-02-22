@@ -23,7 +23,7 @@ function Signup() {
   }
 
   try {
-    const res = await axios.post('https://coastal-isabella-qudratmasoom-51835cde.koyeb.app/authentication/signup', {
+    const res = await axios.post(`${import.meta.env.VITE_API_URL}/authentication/signup`, {
       name,
       email,
       password
@@ -53,7 +53,7 @@ function Signup() {
   }
   const handleVerifyCode = async()=>{
     try{
-    const response = await axios.post('https://coastal-isabella-qudratmasoom-51835cde.koyeb.app/authentication/verifyEmail',{
+    const response = await axios.post(`${import.meta.env.VITE_API_URL}/authentication/verifyEmail`,{
       code:VerifyCode
       })
       alert(response.data.message)
