@@ -18,7 +18,7 @@ const [page, setPage] = useState(1);
   setSpinner(true);
   try {
     const res = await axios.get(
-      `${import.meta.env.VITE_API_URL}/readproduct?page=${targetPage}&limit=10`
+      `${import.meta.env.VITE_API_URL}/api/readproduct?page=${targetPage}&limit=10`
     );
 
     const newProducts = res.data?.products || [];

@@ -51,11 +51,9 @@ function AllCategory() {
               </div>
               <button
                 onClick={() => {
-                  const isverify = localStorage.getItem("verify");
+                 
                   const token = localStorage.getItem("token");
-                  if (!isverify) {
-                    navigate("/signup");
-                  } else if (!token) {
+                   if (!token) {
                     navigate("/login");
                   } else {
                     navigate(`/OrderPage/${item._id}`);
