@@ -6,12 +6,12 @@ function Signup() {
   const [name , setName] = useState('')
   const [email , setEmail] = useState('')
   const [password , setPassword] = useState('')
-  const [formDisplay, setFormDisplay] = useState(false)
-  const [VerifyCode, setVerifyCode] = useState('')
+  // const [formDisplay, setFormDisplay] = useState(false)
+  // const [VerifyCode, setVerifyCode] = useState('')
   const [alerts , setAlert] = useState('')
   const [successAlert, setSuccessAlert] = useState(false)
   const [dangerAlert, setDangerAlert] = useState(false)
-  const[countsecond, SetCountSecond] = useState(320)
+  // const[countsecond, SetCountSecond] = useState(320)
  
  const handlesubmit = async (e) => {
  e.preventDefault();
@@ -30,13 +30,13 @@ function Signup() {
     });
 
     
-    setAlert(res.data.message);
     setSuccessAlert(true);
-    setFormDisplay(true); 
+    setAlert(res.data.message);
+    // setFormDisplay(true); 
 
   } catch (err) {
-    setAlert(err.response?.data.message || "Something went wrong");
     setDangerAlert(true);
+    setAlert(err.response?.data.message || "Something went wrong");
   }
 };
   useEffect(()=>{
@@ -47,36 +47,36 @@ function Signup() {
       }, 5000);
       return ()=> clearTimeout(timer)
     },[alerts])
-  const handleformdisplay = ()=>{
-    if(name !=="" && email !=='' && password.length !==''){
-    setFormDisplay(true)}
-  }
-  const handleVerifyCode = async()=>{
-    try{
-    const response = await axios.post(`${import.meta.env.VITE_API_URL}/authentication/verifyEmail`,{
-      code:VerifyCode
-      })
-      alert(response.data.message)
-      localStorage.setItem("verify",true)
-    }catch(err){
-      alert(err.response?.data.message)
-    }
+  // const handleformdisplay = ()=>{
+  //   if(name !=="" && email !=='' && password.length !==''){
+  //   setFormDisplay(true)}
+  // }
+  // const handleVerifyCode = async()=>{
+  //   try{
+  //   const response = await axios.post(`${import.meta.env.VITE_API_URL}/authentication/verifyEmail`,{
+  //     code:VerifyCode
+  //     })
+  //     alert(response.data.message)
+  //     localStorage.setItem("verify",true)
+  //   }catch(err){
+  //     alert(err.response?.data.message)
+  //   }
 
-  }
-  useEffect(()=>{
-    if(!formDisplay) return;
-    const intervel = setInterval(() => {
-     SetCountSecond(prev => {
-      if(prev <= 0){
-        clearInterval(intervel);
-        setFormDisplay(null)
-        return prev;
-      }
-      return prev - 1
-     })
-    }, 1000)
+  // }
+  // useEffect(()=>{
+  //   if(!formDisplay) return;
+  //   const intervel = setInterval(() => {
+  //    SetCountSecond(prev => {
+  //     if(prev <= 0){
+  //       clearInterval(intervel);
+  //       setFormDisplay(null)
+  //       return prev;
+  //     }
+  //     return prev - 1
+  //    })
+  //   }, 1000)
     
-  },[formDisplay])
+  // },[formDisplay])
   
   return (
     <>
@@ -104,13 +104,13 @@ function Signup() {
     <input type="password" className="form-control" id="exampleInputPassword1" onChange={(e)=>setPassword(e.target.value)}/>
   </div>
  
-  <button type="submit" className="btn btn-primary" onClick={handleformdisplay}>Submit</button>
-  {formDisplay && <div className="form-group">
+  <button type="submit" className="btn btn-primary" >Submit</button>
+  {/* {formDisplay && <div className="form-group">
     <label htmlFor="exampleInputverifypassword">Verify Code</label>
     <input type="password" className="form-control" id="exampleInputverifypassword" onChange={(e)=> setVerifyCode(e.target.value)} />
     <button type='button' onClick={handleVerifyCode} className="btn btn-primary">Verify</button>
     <span  className="form-group">Enter code within 5 minutes! {countsecond}</span>
-  </div>}
+  </div>} */}
 </form>
 </div>
 <div className="spantextlogin">BuyLoom</div>

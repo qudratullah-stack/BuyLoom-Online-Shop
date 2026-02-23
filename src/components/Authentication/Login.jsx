@@ -11,12 +11,12 @@ function Login() {
   const timer = setTimeout(() => {
     setSuccessAlert(false)
     setDangerAlert(false)
-  }, 1300);
- })
+  }, 7000);
+ },[alerts])
   const handleform = async (e)=>{
       e.preventDefault();
       try{
-     const res = await axios.post("https://coastal-isabella-qudratmasoom-51835cde.koyeb.app/authentication/login",{
+     const res = await axios.post(`${import.meta.env.VITE_API_URL}/authentication/login`,{
      email: loginEmail,
      password: loginPassword
      })
